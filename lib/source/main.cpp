@@ -5,11 +5,22 @@
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
 
+#include "Vec2.hpp"
+
 unsigned const int WINDOW_WIDTH = 800;
 unsigned const int WINDOW_HEIGHT = 600;
 
 int main(int argc, char* argv[])
 {
+
+	auto v1 = Vec2(3, 4);
+	std::cout << v1.length() << std::endl;
+	v1.rotate(180);
+	std::cout << v1 << std::endl;
+	std::cout << v1.length() << std::endl;
+	std::cout << v1.length() << std::endl;
+
+
 	sf::VideoMode mode = sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT);
 	auto tytle = "MyMario";
 	auto style = sf::Style::Close;
